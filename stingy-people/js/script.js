@@ -8,6 +8,22 @@ $(document).ready(function() {
         textAlign: "left",
         margin: 0,
     });
+    
+    var firebaseConfig = {
+    apiKey: "AIzaSyDW68RC9cyvSUew80sDiD_Mv0aUjV1syBg",
+    authDomain: "stingy-db.firebaseapp.com",
+    projectId: "stingy-db",
+    storageBucket: "stingy-db.appspot.com",
+    messagingSenderId: "240964825094",
+    appId: "1:240964825094:web:b2137751cc2ad36d301387",
+    measurementId: "G-0ZT78WZELC"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
+  var db = firebase.firestore()
+  
 
     // swal("Hello world!");
 
@@ -50,6 +66,10 @@ $(document).ready(function() {
     $('#branch').keyup(() => {
         $('#id-card-branch').text($('#branch').val())
     });
+    // Bind position
+    $('#position').keyup(() => {
+        $('#id-card-position').text($('#position').val())
+    });
 
     // BindWeight
     $('#weight').keyup(() => {
@@ -79,7 +99,7 @@ $(document).ready(function() {
                     closeOnClickOutside: false,
                     buttons: {
                         cancel: true,
-                        confirm: "Support",
+                        confirm: "Cool",
                     },
                     dangerMode: true,
                 })
@@ -161,6 +181,7 @@ $(document).ready(function() {
     // }
 
     $("#download-button").click(() => {
+        $('#branch').focusout()
         var vp = document.getElementById("viewportMeta").getAttribute("content");
 
         document.getElementById("viewportMeta").setAttribute("content", "width=800");
@@ -183,7 +204,7 @@ $(document).ready(function() {
                 closeOnClickOutside: false,
                 buttons: {
                     cancel: true,
-                    confirm: "Support",
+                    confirm: "Okay",
                 },
                 dangerMode: true,
             })
@@ -198,6 +219,17 @@ $(document).ready(function() {
             });
         document.getElementById("viewportMeta").setAttribute("content", vp);
 
+db.collection("users").add({
+    first: "Ada",
+    last: "Lovelace",
+    born: 1815
+})
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
 
     });
 
