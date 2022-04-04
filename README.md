@@ -2,7 +2,7 @@
 
 ## I'm an Open Source Developer...
 
-![Rodriq](https://user-images.githubusercontent.com/39289592/161521441-c2838906-f7dd-4c05-ad1b-58fb340c5d7e.jpg)
+<img src="https://user-images.githubusercontent.com/39289592/161521441-c2838906-f7dd-4c05-ad1b-58fb340c5d7e.jpg" alt="Rodriq" width="200"/>
 
 
 <!--
