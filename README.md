@@ -2,6 +2,9 @@
 
 ## I'm an Open Source Developer...
 
+![Rodriq](https://user-images.githubusercontent.com/39289592/161521441-c2838906-f7dd-4c05-ad1b-58fb340c5d7e.jpg)
+
+
 <!--
 **Rodriq/Rodriq** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
